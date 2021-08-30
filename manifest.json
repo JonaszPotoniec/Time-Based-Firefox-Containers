@@ -1,0 +1,34 @@
+{
+
+  "manifest_version": 2,
+  "name": "Time-base default containers",
+  "version": "1.0",
+
+  "description": "Let's you automagicaly change default containers based on time",
+
+
+  "permissions": [
+    "contextualIdentities",
+    "cookies",
+    "tabs",
+    "bookmarks",
+    "storage"
+  ],
+  
+	"icons": {
+  },
+
+  "background": {
+    "scripts": ["index.js"]
+  },
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ContainersToolkit@jonaszpotoniec.github.io"
+    }
+  }
+}

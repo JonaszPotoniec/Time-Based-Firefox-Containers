@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="options.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div>
+      <label for="containerSelect">Default container: </label>
+      <select id="containerSelect" required>
+        <option value="firefox-default">Default</option>
+      </select>
+    </div>
+    <form>
+      <fieldset>
+        <legend>Add new rule:</legend>
+        <div>
+          <div>
+            <label for="timeFrom">From: </label>
+            <input type="time" id="timeFrom" name="timeFrom" required />
+          </div>
+          <div>
+            <label for="timeTo">To: </label>
+            <input type="time" id="timeTo" name="timeTo" required />
+          </div>
+          <div>
+            <label for="containerSelectForm">Container name: </label>
+            <select id="containerSelectForm" required></select>
+          </div>
+          <button type="submit">Add</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>Container name</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <button id="clearAll">Clear all</button>
+    <h3 class="center"><span class="warning">WARNING</span> using facebook containers causes troubles</h3>
+
+    <script src="options.js"></script>
+  </body>
+</html>
