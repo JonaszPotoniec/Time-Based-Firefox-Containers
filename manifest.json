@@ -14,8 +14,10 @@
     "bookmarks",
     "storage"
   ],
-  
-	"icons": {
+
+  "icons": {
+    "48": "icon.svg",
+    "96": "icon.svg"
   },
 
   "background": {
