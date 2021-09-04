@@ -23,13 +23,18 @@ fieldset {
 fieldset > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-auto-flow: column;
     grid-gap: .4em;
 }
 
 button {
     text-align: center;
+}
+
+button[type=submit] {
+    grid-row: 3;
+    grid-column: 1 / span 2;
 }
 
 .center {
@@ -41,3 +46,36 @@ button {
 .warning {
     color: red;
 }
+
+#weekDays {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#weekDays > input {    
+    display: none;
+}
+
+#weekDays > input:checked + label {
+    color: green;
+    text-decoration: underline;
+}
+
+#weekDays > label {
+    cursor: pointer;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

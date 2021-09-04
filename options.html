@@ -29,6 +29,23 @@
             <label for="containerSelectForm">Container name: </label>
             <select id="containerSelectForm" required></select>
           </div>
+          <div id="weekDays">
+            <span>Weekdays: </span>
+            <input type="checkbox" id="weekday-monday" checked />
+            <label for="weekday-monday" title="Monday">M</label>
+            <input type="checkbox" id="weekday-tuesday" checked />
+            <label for="weekday-tuesday" title="Tuesday">T</label>
+            <input type="checkbox" id="weekday-wednesday" checked />
+            <label for="weekday-wednesday" title="Wednesday">W</label>
+            <input type="checkbox" id="weekday-thursday" checked />
+            <label for="weekday-thursday" title="Thursday">T</label>
+            <input type="checkbox" id="weekday-friday" checked />
+            <label for="weekday-friday" title="Friday">F</label>
+            <input type="checkbox" id="weekday-saturday" checked />
+            <label for="weekday-saturday" title="Saturday">S</label>
+            <input type="checkbox" id="weekday-sunday" checked />
+            <label for="weekday-sunday" title="Sunday">S</label>
+          </div>
           <button type="submit">Add</button>
         </div>
       </fieldset>
@@ -39,14 +56,19 @@
         <tr>
           <th>From</th>
           <th>To</th>
+          <th>Weekdays</th>
           <th>Container name</th>
+          <th style="width:.1%"></th>
         </tr>
       </thead>
       <tbody id="tableBody"></tbody>
     </table>
 
     <button id="clearAll">Clear all</button>
-    <h3 class="center"><span class="warning">WARNING</span> using facebook containers causes troubles</h3>
+    <h3 class="center">
+      <span class="warning">WARNING</span> using facebook containers causes
+      troubles
+    </h3>
 
     <script src="options.js"></script>
   </body>

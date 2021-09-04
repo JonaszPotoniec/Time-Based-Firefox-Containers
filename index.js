@@ -2,16 +2,18 @@ const getCurrentContainer = async () => {
   const currentDate = new Date();
   const currentHour = currentDate.getHours();
   const currentMinutes = currentDate.getMinutes();
+  const currentDay = (currentDate.getDay()+6)%7;
   const containersPolicies = (await browser.storage.sync.get(
     "containersPolicies"
   ))?.containersPolicies;
 
   return (
     containersPolicies?.find((container) => {
-      const [fromHour, fromMinute] = container.from.split(":");
-      const [toHour, toMinute] = container.to.split(":");
+      const [fromHour, fromMinute] = container.from;
+      const [toHour, toMinute] = container.to;
 
       if (
+        container.weekdays[currentDay] &&
         fromHour <= currentHour &&
         (fromHour !== currentHour || fromMinute < currentMinutes) &&
         toHour >= currentHour &&
@@ -26,8 +28,8 @@ const getCurrentContainer = async () => {
 };
 
 browser.tabs.onCreated.addListener(async (tab) => {
-  console.log("new tab");
   const currentContainer = await getCurrentContainer();
+  console.log(currentContainer);
   if (!currentContainer) return;
   if (tab.cookieStoreId === currentContainer) return;
 
