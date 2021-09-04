@@ -29,7 +29,6 @@ const getCurrentContainer = async () => {
 
 browser.tabs.onCreated.addListener(async (tab) => {
   const currentContainer = await getCurrentContainer();
-  console.log(currentContainer);
   if (!currentContainer) return;
   if (tab.cookieStoreId === currentContainer) return;
 

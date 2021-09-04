@@ -48,8 +48,9 @@ button[type=submit] {
 }
 
 #weekDays {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1em;
 }
 
 #weekDays > input {    
