@@ -16,16 +16,16 @@
   ],
 
   "icons": {
-    "48": "icon.svg",
-    "96": "icon.svg"
+    "48": "assets/icon.svg",
+    "96": "assets/icon.svg"
   },
 
   "background": {
-    "scripts": ["index.js"]
+    "scripts": ["background/index.js"]
   },
 
   "options_ui": {
-    "page": "options.html"
+    "page": "options/options.html"
   },
 
   "browser_specific_settings": {
